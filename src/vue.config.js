@@ -2,13 +2,13 @@ modult.exports = {
     devServer:{
         host:'localhost',
         port:8080,
-        proxyTable:{
+        proxy:{
             '/api':{
-                target:'http://www.tmooc.cn',
+                target:'https://www.imooc.com',
                 changeOrigin:true, //是否要将主机头的原点设置为url地址
-                'secure': false, // false为http访问，true为https访问
+               // 'secure': false, // false为http访问，true为https访问
                 pathRewrite:{
-                    '^/api':''
+                    '/api':''
                 }
             }
         }

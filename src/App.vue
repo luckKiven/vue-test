@@ -7,8 +7,8 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-//import jsonp from 'jsonp'
-import axios from 'axios'
+import jsonp from 'jsonp'
+//import axios from 'axios'
 export default {
   name: 'App',
   components: {
@@ -26,9 +26,10 @@ export default {
     //  this.data=result; 
     //})
     //代理方式访问,线上还是在nginx配置,而不应该在vue.config.js配置
-    let url="/api/free/"
-    axios.get(url).then(()=>{
-      
+    let url="/api/activity/servicetime"
+    jsonp(url,(error,res)=>{
+      let result =res;
+      this.data=result; 
     })
   }
 }
