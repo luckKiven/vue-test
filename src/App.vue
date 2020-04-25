@@ -28,7 +28,7 @@ export default {
     //代理方式访问,线上还是在nginx配置,而不应该在vue.config.js配置
     let url="/api/free/"
     axios.get(url).then(()=>{
-
+      
     })
   }
 }
