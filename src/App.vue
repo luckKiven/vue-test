@@ -1,20 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import jsonp from 'jsonp'
+//import jsonp from 'jsonp'
 //import axios from 'axios'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+   
+  },
+  data(){
+    return{
+
+
+
+
+     // age:30,
+      //data:''
+    }
   },
   mounted(){
+
+
+
+
+
+
+
     //测试cors访问,所有请求都可以访问,后端设置响应头
     //let url = "https://www.easy-mock.com/mock/5b012c1fe6e1035843cd3aff/mockapi/table/list"
     //axios.get(url).then(()=>{
@@ -26,11 +41,11 @@ export default {
     //  this.data=result; 
     //})
     //代理方式访问,线上还是在nginx配置,而不应该在vue.config.js配置
-    let url="/api/activity/servicetime"
-    jsonp(url,(error,res)=>{
-      let result =res;
-      this.data=result; 
-    })
+   //  let url=" /api/activity/servicetime";
+    //jsonp(url,(err,res)=>{
+    //  let result = res;
+    //  this.data=result;
+   // })
   }
 }
 </script>
